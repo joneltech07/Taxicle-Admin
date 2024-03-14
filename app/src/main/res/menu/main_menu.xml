@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/drivers"
+            android:title="Drivers"
+            android:icon="@drawable/supervised_user_circle"/>
+        <item android:id="@+id/fare"
+            android:title="Fare Matrix"
+            android:icon="@drawable/attach_money"/>
+        <item android:id="@+id/announcement"
+            android:title="Announcement"
+            android:icon="@drawable/announcement"/>
+        <item android:id="@+id/rules"
+            android:title="Rules &amp; Regulations"
+            android:icon="@drawable/rule"/>
+        <item android:id="@+id/terms"
+            android:title="Terms &amp; Conditions"
+            android:icon="@drawable/device_information"/>
+        <item
+            android:id="@+id/logout"
+            android:title="Log Out"
+            android:icon="@drawable/logout"/>
+    </group>
+</menu>

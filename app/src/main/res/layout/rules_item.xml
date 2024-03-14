@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="7dp"
+    android:elevation="7dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+        
+        <TextView
+            android:id="@+id/rulestext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rule"
+            android:textSize="25sp"
+            android:layout_marginLeft="10dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/rulestext">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit"
+                android:background="@drawable/button_rounded"
+                android:textAllCaps="false"
+                android:layout_marginRight="5dp"
+                android:id="@+id/btnEdit" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:background="@drawable/button_rounded"
+                android:backgroundTint="#C82727"
+                android:textAllCaps="false"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/btnDelete" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
