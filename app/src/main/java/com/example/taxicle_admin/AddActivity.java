@@ -88,6 +88,7 @@ public class AddActivity extends AppCompatActivity {
                     Toast.makeText(this, "Data Inserted Successfully.", Toast.LENGTH_SHORT).show();
 
                     clearAll();
+                    onBackPressed();
                 })
                 .addOnFailureListener(e -> {
                     Toast.makeText(this, "Error while insertion.", Toast.LENGTH_SHORT).show();
@@ -103,6 +104,8 @@ public class AddActivity extends AppCompatActivity {
 
                     if (task.isSuccessful()) {
                         insertData(user.getUid());
+                    } else {
+                        Toast.makeText(this, "Err: "+task.getResult().toString(), Toast.LENGTH_SHORT).show();
                     }
                 });
     }
