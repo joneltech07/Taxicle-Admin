@@ -67,6 +67,11 @@ public class AddActivity extends AppCompatActivity {
             return false;
         }
 
+        if (password.length() < 7) {
+            Toast.makeText(this, "Please enter atleast 7 characters", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
         if (!password.equals(repassword)) {
             Toast.makeText(this, "Password not matched", Toast.LENGTH_SHORT).show();
             return false;
@@ -86,9 +91,8 @@ public class AddActivity extends AppCompatActivity {
                 .setValue(map)
                 .addOnSuccessListener(unused -> {
                     Toast.makeText(this, "Data Inserted Successfully.", Toast.LENGTH_SHORT).show();
-
+                    auth.signOut();
                     clearAll();
-                    onBackPressed();
                 })
                 .addOnFailureListener(e -> {
                     Toast.makeText(this, "Error while insertion.", Toast.LENGTH_SHORT).show();

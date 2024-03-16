@@ -15,6 +15,9 @@
         android:theme="@style/Theme.TaxicleAdmin"
         tools:targetApi="31">
         <activity
+            android:name=".ChangePasswordActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
@@ -40,9 +43,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false">
-
-        </activity>
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"

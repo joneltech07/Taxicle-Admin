@@ -1,6 +1,7 @@
 package com.example.taxicle_admin;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,10 +46,9 @@ public class MainAdapter extends FirebaseRecyclerAdapter<Main, MainAdapter.myVie
         holder.btnEdit.setOnClickListener(v -> {
             final DialogPlus dialogPlus = DialogPlus.newDialog(holder.name.getContext())
                     .setContentHolder(new ViewHolder(R.layout.update_popup))
-                    .setExpanded(true, 1400)
+                    .setExpanded(true, 1500)
                     .create();
 
-//            dialogPlus.show();
 
             View view = dialogPlus.getHolderView();
             EditText name = view.findViewById(R.id.txtName);
@@ -56,6 +56,7 @@ public class MainAdapter extends FirebaseRecyclerAdapter<Main, MainAdapter.myVie
             EditText address = view.findViewById(R.id.txtAddress);
 
             Button btnUpdate = view.findViewById(R.id.btnUpdate);
+            Button btnChangePass = view.findViewById(R.id.btnChangePass);
 
             name.setText(model.getName());
             phone.setText(model.getPhone());
@@ -80,6 +81,12 @@ public class MainAdapter extends FirebaseRecyclerAdapter<Main, MainAdapter.myVie
                             dialogPlus.dismiss();
                         });
             });
+
+            btnChangePass.setOnClickListener(v1 -> {
+                Intent intent = new Intent(holder.name.getContext(), ChangePasswordActivity.class);
+                intent.putExtra("email", holder.email.getText().toString());
+                holder.name.getContext().startActivity(intent);
+            });
         });
 
         holder.btnDelete.setOnClickListener(view -> {
@@ -96,6 +103,7 @@ public class MainAdapter extends FirebaseRecyclerAdapter<Main, MainAdapter.myVie
             }));
             builder.show();
         });
+
     }
 
     @NonNull

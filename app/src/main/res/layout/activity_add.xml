@@ -34,6 +34,7 @@
         android:inputType="textPersonName|textCapWords"
         android:background="@drawable/rounded"
         android:gravity="center"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
         android:textColor="@color/black" />
 
     <TextView
@@ -51,6 +52,7 @@
         android:layout_height="48dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:maxLength="11"
         android:inputType="phone"
         android:background="@drawable/rounded"
         android:gravity="center"
