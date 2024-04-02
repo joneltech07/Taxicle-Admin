@@ -6,45 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".FareMatrix">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:gravity="center"
-        android:orientation="vertical"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Fare Value" />
-
-        <EditText
-            android:id="@+id/txtValue"
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:background="@drawable/rounded"
-            android:textColor="@color/black"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:layout_marginBottom="15dp"
-            android:hint="Fare per km"
-            android:inputType="numberDecimal" />
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/btn_update"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Update"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
+            android:layout_height="wrap_content"
+            android:src="@drawable/fare_matrix"/>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

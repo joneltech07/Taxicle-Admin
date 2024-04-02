@@ -53,6 +53,7 @@
         android:background="@drawable/rounded"
         android:gravity="center"
         android:inputType="phone"
+        android:minLines="11"
         android:hint="@string/app_name"
         android:textColor="@color/black" />
 
