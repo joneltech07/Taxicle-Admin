@@ -97,6 +97,9 @@ public class MainAdapter extends FirebaseRecyclerAdapter<Main, MainAdapter.myVie
             builder.setPositiveButton("Delete", (dialogInterface, i) -> {
                 FirebaseDatabase.getInstance().getReference().child("Driver")
                         .child(getRef(position).getKey()).removeValue();
+
+                FirebaseDatabase.getInstance().getReference().child("AvailableDriver")
+                        .child(getRef(position).getKey()).removeValue();
             });
             builder.setNegativeButton("Cancel", ((dialogInterface, i) -> {
                 Toast.makeText(holder.name.getContext(), "Cancelled.", Toast.LENGTH_SHORT).show();
